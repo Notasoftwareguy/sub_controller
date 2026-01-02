@@ -21,3 +21,15 @@ gst-launch-1.0 v4l2src device=/dev/video0 ! videoconvert ! x264enc tune=zerolate
 
 Checking IP address:
 hostname -I
+
+
+cmake .. \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_INSTALL_PREFIX=/usr/local \
+  -DOPENCV_EXTRA_MODULES_PATH=~/build/opencv_contrib/modules \
+  -DWITH_GSTREAMER=ON \
+  -DWITH_FFMPEG=ON \
+  -DBUILD_opencv_python3=ON \
+  -DBUILD_opencv_python2=OFF \
+  -DBUILD_TESTS=OFF \
+  -DBUILD_EXAMPLES=OFF

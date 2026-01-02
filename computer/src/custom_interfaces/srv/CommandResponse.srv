@@ -1,0 +1,4 @@
+string command
+bool expect_response
+---
+string response
